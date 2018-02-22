@@ -23,8 +23,25 @@ export class OlderCoaster extends React.Component {
     ));
   }
 };
-export class InFrontOfYou extends React.Component {};
-export class ButcherShop extends React.Component {};
+export class InFrontOfYou extends React.Component {
+  render() {
+    React.createElement('div', {},
+    React.createElement('p', {}, "You shouldn't look too far."),
+    React.createElement('p', {}, 'Sometimes, the solution is right in front of you.')
+    );
+  }
+};
+export class ButcherShop extends React.Component {
+  render() {
+    React.createElement('div', {className: 'butcher-shop'},
+    React.createElement('p', {}, "Hello! We have the following products for sale today:"),
+    React.createElement('ul', {},
+      [
+        React.createElement('li', {}, BUTCHER_PRODUCTS.map( product => return product;));
+      ]
+    ));
+  }
+};
 
 ReactDOM.render(
   React.createElement('div', {}, [
