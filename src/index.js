@@ -8,38 +8,40 @@ const BUTCHER_PRODUCTS = [
   'Beef shin',
   'Ribeye'
 ];
-const listProducts = BUTCHER_PRODUCTS.map(p => return p);
+//const listProducts = BUTCHER_PRODUCTS.map(p => return p);
 // Define these exported classes
 export class OlderCoaster extends React.Component {
   render() {
-    React.createElement('div', {className: 'oldercoaster'},
-    React.createElement('p', {}, 'Two grannies having the time of their life!'),
-    React.createElement('p', {}, 'Passengers:'),
-    React.createElement('ul', {},
-      [
-        React.createElement('li', {}, 'Agnes'),
-        React.createElement('li', {}, 'Muriel')
-      ]
-    ));
+    return React.createElement('div', {className: 'oldercoaster'},
+      React.createElement('p', {}, 'Two grannies having the time of their life!'),
+      React.createElement('p', {}, 'Passengers:'),
+      React.createElement('ul', {},
+        [
+          React.createElement('li', {}, 'Agnes'),
+          React.createElement('li', {}, 'Muriel')
+        ]
+      )
+    );
   }
 };
 export class InFrontOfYou extends React.Component {
   render() {
-    React.createElement('div', {},
-    React.createElement('p', {}, "You shouldn't look too far."),
-    React.createElement('p', {}, 'Sometimes, the solution is right in front of you.')
+    return React.createElement('div', {},
+      React.createElement('p', {}, "You shouldn't look too far."),
+      React.createElement('p', {}, 'Sometimes, the solution is right in front of you.')
     );
   }
 };
 export class ButcherShop extends React.Component {
   render() {
-    React.createElement('div', {className: 'butcher-shop'},
-    React.createElement('p', {}, "Hello! We have the following products for sale today:"),
-    React.createElement('ul', {},
-      [
-        React.createElement('li', {}, listProducts)
-      ]
-    ));
+    return React.createElement('div', {className: 'butcher-shop'},
+      React.createElement('p', {}, "Hello! We have the following products for sale today:"),
+      React.createElement('ul', {},
+        [
+          BUTCHER_PRODUCTS.map(function (p) {return React.createElement('li', {}, p)} )
+        ]
+      )
+    );
   }
 };
 
